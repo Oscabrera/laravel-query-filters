@@ -46,5 +46,5 @@ export default {
             copyright: "Copyright © 2024-present Adocs",
         },
     },
-    base: '/laravel-query-options/',
+    base: '/laravel-query-filters/',
 }
