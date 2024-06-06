@@ -2,6 +2,12 @@
 
 A Laravel package for advanced query filtering and conditions.
 
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/oscabrera/laravel-query-filters.svg?style=flat-square)](https://packagist.org/packages/oscabrera/laravel-query-filtersgsgs)
+
+[![Total Downloads](https://img.shields.io/packagist/dt/oscabrera/laravel-query-filters.svg?style=flat-square)](https://packagist.org/packages/oscabrera/laravel-query-filtersgsgs)
+
+[![built with Codeium](https://codeium.com/badges/main)](https://codeium.com)
+
 ![laravel-query-filters](https://socialify.git.ci/Oscabrera/laravel-query-filters/image?language=1&name=1&owner=1&pattern=Floating%20Cogs&theme=Auto)
 
 ## Installation
