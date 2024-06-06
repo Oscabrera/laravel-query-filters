@@ -1,8 +1,8 @@
-# Laravel Query Options
+# Laravel Query Filters
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/oscabrera/laravel-query-options.svg?style=flat-square)](https://packagist.org/packages/oscabrera/laravel-query-options)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/oscabrera/laravel-query-filters.svg?style=flat-square)](https://packagist.org/packages/oscabrera/laravel-query-filters)
 
-[![Total Downloads](https://img.shields.io/packagist/dt/oscabrera/laravel-query-options.svg?style=flat-square)](https://packagist.org/packages/oscabrera/laravel-query-options)
+[![Total Downloads](https://img.shields.io/packagist/dt/oscabrera/laravel-query-filters.svg?style=flat-square)](https://packagist.org/packages/oscabrera/laravel-query-filters)
 
 [![built with Codeium](https://codeium.com/badges/main)](https://codeium.com)
 

@@ -1,15 +1,15 @@
 export default {
-    title: 'Laravel Query Options',
-    description: 'Main repository Package for Laravel Query Options',
+    title: 'Laravel Query filters',
+    description: 'Main repository Package for Laravel Query Filters',
     lang: 'en-US',
     themeConfig: {
         logo: '/logo.svg',
         socialLinks: [
-            { icon: "github", link: "https://github.com/Oscabrera/laravel-query-options" },
+            { icon: "github", link: "https://github.com/Oscabrera/laravel-query-filters" },
         ],
         nav: [
             { text: "Contact", link: "https://github.com/Oscabrera" },
-            { text: "Changelog", link: "https://github.com/Oscabrera/laravel-query-options/releases" },
+            { text: "Changelog", link: "https://github.com/Oscabrera/laravel-query-filters/releases" },
         ],
         sidebar: [
             {
@@ -28,10 +28,10 @@ export default {
                 text: "Query Options",
                 collapsible: true,
                 items: [
-                    { text: "What is?", link: "/query-options/what-is" },
-                    { text: "Structure", link: "/query-options/structure" },
-                    { text: "Filter Types", link: "/query-options/filter-types" },
-                    { text: "Example", link: "/query-options/example" },
+                    { text: "What is?", link: "/query-filters/what-is" },
+                    { text: "Structure", link: "/query-filters/structure" },
+                    { text: "Filter Types", link: "/query-filters/filter-types" },
+                    { text: "Example", link: "/query-filters/example" },
                 ],
             },
             {
