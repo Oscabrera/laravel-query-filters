@@ -1,4 +1,5 @@
 <?php
+namespace Oscabrera\QueryFilters;
 
 use Illuminate\Support\ServiceProvider;
 use Oscabrera\QueryFilters\Utilities\QueryFilters;
