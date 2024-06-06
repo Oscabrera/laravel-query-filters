@@ -3,6 +3,7 @@
 use Illuminate\Support\ServiceProvider;
 use Oscabrera\QueryFilters\Utilities\QueryFilters;
 use Illuminate\Database\Eloquent\Builder;
+
 class QueryFiltersServiceProvider extends ServiceProvider
 {
     /**
@@ -12,7 +13,7 @@ class QueryFiltersServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/query-filters.php', 'query-filters');
+        $this->mergeConfigFrom(__DIR__ . '/../config/query-filters.php', 'query-filters');
 
         $this->app->singleton('query-filters', function () {
             return new QueryFilters();
@@ -29,14 +30,15 @@ class QueryFiltersServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $methodName = config('query-filters.method_name', 'applyFilters');
-        // Register global query scopes
-        Builder::macro($methodName, function ($queryFilters) {
+        /** @var string $methodName */
+        $builder = app(Builder::class);
+        $builder::macro($methodName, function ($queryFilters) {
             $queryFilters->apply($this);
             return $this;
         });
 
         $this->publishes([
-            __DIR__.'/../config/query-filters.php' => config_path('query-filters.php'),
+            __DIR__ . '/../config/query-filters.php' => config_path('query-filters.php'),
         ], 'config');
     }
 }
