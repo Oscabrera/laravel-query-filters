@@ -1,7 +1,7 @@
 ---
 layout: home
 hero:
-  name: Laravel Query Options
+  name: Laravel Query Filters
   tagline: This Laravel package allows you to advanced query filtering and conditions.
   actions:
     - theme: brand
@@ -9,7 +9,7 @@ hero:
       link: /getting-started/Introduction
     - theme: alt
       text: View on GitHub
-      link: https://github.com/Oscabrera/laravel-query-options
+      link: https://github.com/Oscabrera/laravel-query-filters
 features:
   - icon: 🚀
     title: Instant Usage

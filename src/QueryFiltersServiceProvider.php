@@ -22,16 +22,16 @@ class QueryFiltersServiceProvider extends ServiceProvider
     /**
      * Registers a global query scope "applyFilters" on the Builder class.
      *
-     * The "applyFilters" query scope applies the given $queryOptions to the current query builder instance.
-     * It allows chaining of query options and returns the modified query builder instance.
+     * The "applyFilters" query scope applies the given $queryFilters to the current query builder instance.
+     * It allows chaining of query filters and returns the modified query builder instance.
      *
      */
     public function boot(): void
     {
         $methodName = config('query-filters.method_name', 'applyFilters');
         // Register global query scopes
-        Builder::macro($methodName, function ($queryOptions) {
-            $queryOptions->apply($this);
+        Builder::macro($methodName, function ($queryFilters) {
+            $queryFilters->apply($this);
             return $this;
         });
 

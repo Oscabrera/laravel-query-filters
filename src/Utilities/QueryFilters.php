@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Builder;
 /**
  * Class QueryFilters
  *
- * Represents the query options for performing database queries.
+ * Represents the query filters for performing database queries.
  */
 class QueryFilters
 {

@@ -16,21 +16,21 @@ trait GlobalQueryScopes
      */
     public static function bootGlobalQueryScopes(): void
     {
-        static::addGlobalScope('applyFilters', function (Builder $builder, QueryFilters $queryOptions) {
-            $queryOptions->apply($builder);
+        static::addGlobalScope('applyFilters', function (Builder $builder, QueryFilters $queryFilters) {
+            $queryFilters->apply($builder);
         });
     }
 
     /**
-     * Scope a query to apply the given QueryOptions.
+     * Scope a query to apply the given QueryFilters.
      *
      * @param Builder $query
-     * @param QueryFilters $queryOptions
+     * @param QueryFilters $queryFilters
      * @return Builder
      */
-    public function scopeApplyFilters(Builder $query, QueryFilters $queryOptions): Builder
+    public function scopeApplyFilters(Builder $query, QueryFilters $queryFilters): Builder
     {
-        $queryOptions->apply($query);
+        $queryFilters->apply($query);
         return $query;
     }
 }

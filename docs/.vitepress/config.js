@@ -25,7 +25,7 @@ export default {
                 ],
             },
             {
-                text: "Query Options",
+                text: "Query Filters",
                 collapsible: true,
                 items: [
                     { text: "What is?", link: "/query-filters/what-is" },

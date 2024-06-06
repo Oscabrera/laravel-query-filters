@@ -35,8 +35,8 @@ use Illuminate\Http\Request;
 public function index(Request $request)
 {
     $conditions = ['status' => 'active'];
-    $queryOptions = new QueryFilters($conditions);
-    $results = YourModel::query()->applyFilters($queryOptions)->get();
+    $queryFilters = new QueryFilters($conditions);
+    $results = YourModel::query()->applyFilters($queryFilters)->get();
 
     return response()->json($results);
 }
@@ -51,8 +51,8 @@ use Illuminate\Http\Request;
 public function index(Request $request)
 {
     $conditions = ['status' => ['active', 'pending']];
-    $queryOptions = new QueryFilters($conditions);
-    $results = YourModel::query()->applyFilters($queryOptions)->get();
+    $queryFilters = new QueryFilters($conditions);
+    $results = YourModel::query()->applyFilters($queryFilters)->get();
 
     return response()->json($results);
 }
@@ -67,8 +67,8 @@ use Illuminate\Http\Request;
 
 public function index(Request $request)
 {
-    $queryOptions = new QueryFilters([['age', '>', 18]]);
-    $results = YourModel::query()->applyFilters($queryOptions)->get();
+    $queryFilters = new QueryFilters([['age', '>', 18]]);
+    $results = YourModel::query()->applyFilters($queryFilters)->get();
 
     return response()->json($results);
 }
@@ -83,8 +83,8 @@ use Illuminate\Http\Request;
 
 public function index(Request $request)
 {
-    $queryOptions = new QueryFilters([['age', '=', [18, 19, 20]]]);
-    $results = YourModel::query()->applyFilters($queryOptions)->get();
+    $queryFilters = new QueryFilters([['age', '=', [18, 19, 20]]]);
+    $results = YourModel::query()->applyFilters($queryFilters)->get();
 
     return response()->json($results);
 }
@@ -106,8 +106,8 @@ public function index(Request $request)
             }
         ]
     ];
-    $queryOptions = new QueryFilters($conditions);
-    $results = YourModel::query()->applyFilters($queryOptions)->get();
+    $queryFilters = new QueryFilters($conditions);
+    $results = YourModel::query()->applyFilters($queryFilters)->get();
 
     return response()->json($results);
 }
@@ -130,10 +130,10 @@ public function index(Request $request)
             'not' => true
         ]
     ];
-    $queryOptions = new QueryFilters($conditions);
+    $queryFilters = new QueryFilters($conditions);
     
     $results = YourModel::query()
-                        ->applyFilters($queryOptions)
+                        ->applyFilters($queryFilters)
                         ->get();
     
     return response()->json($results);

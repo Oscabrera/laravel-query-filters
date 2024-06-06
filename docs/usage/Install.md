@@ -4,12 +4,12 @@
 
 ### Composer Dependency:
 
-To leverage the functionalities offered by the `oscabrera/laravel-query-options` package in your Laravel project, you'll
+To leverage the functionalities offered by the `oscabrera/laravel-query-filters` package in your Laravel project, you'll
 need to install it using Composer, the dependency management tool for PHP. Open your terminal or command prompt and
 navigate to your project's root directory. Then, execute the following command:
 
 ```shell
-composer require oscabrera/laravel-query-options
+composer require oscabrera/laravel-query-filters
 ```
 
 ### Publish the Configuration File:
