@@ -3,7 +3,8 @@ namespace Oscabrera\QueryFilters;
 
 use Illuminate\Support\ServiceProvider;
 use Oscabrera\QueryFilters\Utilities\QueryFilters;
-use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Builder as EloquentBuilder;
+use Illuminate\Database\Query\Builder as BaseBuilder;
 
 class QueryFiltersServiceProvider extends ServiceProvider
 {
@@ -30,16 +31,29 @@ class QueryFiltersServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        if ($this->app->runningInConsole()) {
+            $this->publishes([
+                __DIR__ . '/../config/query-filters.php' => config_path('query-filters.php'),
+            ], 'config');
+        }
+
+        $this->registerMacro();
+    }
+
+    /**
+     * Registers a macro for applying query filters.
+     *
+     * @return void
+     */
+    protected function registerMacro(): void
+    {
         $methodName = config('query-filters.method_name', 'applyFilters');
-        /** @var string $methodName */
-        $builder = app(Builder::class);
-        $builder::macro($methodName, function ($queryFilters) {
+        $macro = function ($queryFilters) {
             $queryFilters->apply($this);
             return $this;
-        });
-
-        $this->publishes([
-            __DIR__ . '/../config/query-filters.php' => config_path('query-filters.php'),
-        ], 'config');
+        };
+        /** @var string $methodName */
+        EloquentBuilder::macro($methodName, $macro);
+        BaseBuilder::macro($methodName, $macro);
     }
 }
