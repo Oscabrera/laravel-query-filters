@@ -3,8 +3,12 @@
 A Laravel package for advanced query filtering and conditions.
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/oscabrera/laravel-query-filters.svg?style=flat-square)](https://packagist.org/packages/oscabrera/laravel-query-filtersgsgs)
-
 [![Total Downloads](https://img.shields.io/packagist/dt/oscabrera/laravel-query-filters.svg?style=flat-square)](https://packagist.org/packages/oscabrera/laravel-query-filtersgsgs)
+
+[![VitePress](https://github.com/oscabrera/laravel-query-filters/actions/workflows/deploy.yml/badge.svg)](https://github.com/oscabrera/laravel-query-filters/actions/workflows/deploy.yml)
+[![PHPStan](https://github.com/oscabrera/laravel-query-filters/actions/workflows/phpstan.yml/badge.svg)](https://github.com/oscabrera/laravel-query-filters/actions/workflows/phpstan.yml)
+[![Pint](https://github.com/oscabrera/laravel-query-filters/actions/workflows/pint.yml/badge.svg)](https://github.com/oscabrera/laravel-query-filters/actions/workflows/pint.yml)
+[![PHPMD](https://github.com/oscabrera/laravel-query-filters/actions/workflows/phpmd.yml/badge.svg)](https://github.com/oscabrera/laravel-query-filters/actions/workflows/phpmd.yml)
 
 [![built with Codeium](https://codeium.com/badges/main)](https://codeium.com)
 
