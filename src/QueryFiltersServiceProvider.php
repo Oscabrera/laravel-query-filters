@@ -1,17 +1,18 @@
 <?php
+
+declare(strict_types=1);
+
 namespace Oscabrera\QueryFilters;
 
 use Illuminate\Support\ServiceProvider;
-use Oscabrera\QueryFilters\Utilities\QueryFilters;
 use Illuminate\Database\Eloquent\Builder as EloquentBuilder;
 use Illuminate\Database\Query\Builder as BaseBuilder;
+use Oscabrera\QueryFilters\Utilities\QueryFilters;
 
 class QueryFiltersServiceProvider extends ServiceProvider
 {
     /**
      * Registers the 'query-filters' service in the application container as a singleton.
-     *
-     * @return void
      */
     public function register(): void
     {
@@ -27,7 +28,6 @@ class QueryFiltersServiceProvider extends ServiceProvider
      *
      * The "applyFilters" query scope applies the given $queryFilters to the current query builder instance.
      * It allows chaining of query filters and returns the modified query builder instance.
-     *
      */
     public function boot(): void
     {
@@ -43,7 +43,7 @@ class QueryFiltersServiceProvider extends ServiceProvider
     /**
      * Registers a macro for applying query filters.
      *
-     * @return void
+     * @SuppressWarnings(PHPMD.StaticAccess)
      */
     protected function registerMacro(): void
     {
