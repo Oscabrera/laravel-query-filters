@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Oscabrera\QueryFilters\Utilities;
 
 use Closure;
@@ -21,17 +23,11 @@ class QueryFilters
      * The field to use for sorting.
      */
     public function __construct(
-        public array $conditions = []
-    ) {
-    }
+        public array $conditions = [],
+    ) {}
 
     /**
      * Apply the given conditions to the query.
-     *
-     * @param Builder $query
-     *  The query builder instance.
-     *
-     * @return void
      */
     public function apply(Builder $query): void
     {
@@ -47,10 +43,6 @@ class QueryFilters
     /**
      * Handle the given array condition.
      *
-     * @param Builder $query
-     *      The query builder instance.
-     * @param string|int $key
-     *      The column name or column index to apply the condition on.
      * @param array<int|string, int|string|bool|float|Closure> $condition
      *      The condition to be applied.
      *      If $key is a string, $condition represents the values to be checked against the column defined by $key.
@@ -62,8 +54,6 @@ class QueryFilters
      *      - 'operator': represents the operator to be used in the condition (e.g., '=', '>', 'LIKE').
      *      - 'value': represents the value(s) to be checked against the column defined by 'column'
      *      and using the 'operator'.
-     *
-     * @return void
      */
     protected function handleArrayCondition(Builder $query, string|int $key, array $condition): void
     {
@@ -92,15 +82,11 @@ class QueryFilters
     /**
      * Handles a triple condition for a query builder.
      *
-     * @param Builder &                                                                                  $query
-     *                               The query builder object.
      * @param array<int|string, int|string|bool|float|Closure|array<int, string>> $condition
      *                               The triple condition in the format [column, operator, value].
      *                               The operator should be a string comparing operator e.g. '=', '<', '>', etc.
      *                               The value can be either a single value or an array of values for a multiple
      *                               value condition.
-     *
-     * @return void
      */
     protected function handleTripleCondition(Builder $query, array $condition): void
     {
@@ -120,15 +106,11 @@ class QueryFilters
     /**
      * Handles an array value condition for a query builder.
      *
-     * @param Builder &                                                                                  $query
-     *                               The query builder object.
      * @param array{0: string, 1: string, 2: array<int, string>} $condition
      *                               The triple condition in the format [column, operator, value].
      *                               The operator should be a string comparing operator e.g. '=', '<', '>', etc.
      *                               The value can be either a single value or an array of values for a multiple
      *                               value condition.
-     *
-     * @return void
      */
     protected function handleArrayValueCondition(Builder $query, array $condition): void
     {
@@ -142,34 +124,17 @@ class QueryFilters
 
     /**
      * Handles a subQuery condition for a query builder.
-     *
-     * @param Builder &                                             $query
-     *                              The query builder object.
-     * @param string $column
-     *                              The column to apply the subQuery condition on.
-     * @param Closure $subQuery
-     *                              The subQuery closure that defines the subQuery to be used as the condition.
-     * @return void
      */
     protected function handleSubQueryCondition(
         Builder $query,
         string $column,
-        Closure $subQuery
+        Closure $subQuery,
     ): void {
         $query->whereIn($column, $subQuery);
     }
 
     /**
      * Handles a subQuery condition for a query builder.
-     *
-     * @param Builder &                                             $query
-     *                              The query builder object.
-     * @param string $column
-     *                              The column to apply the subQuery condition on.
-     * @param Closure $subQuery
-     *                              The subQuery closure that defines the subQuery to be used as the condition.
-     *
-     * @return void
      */
     protected function handleSubQueryConditionNot(
         Builder $query,
