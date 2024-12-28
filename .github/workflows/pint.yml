@@ -3,8 +3,12 @@ name: Pint
 
 on:
   push:
-    branches:
-      - 'Feature/*'
+    push:
+      branches-ignore:
+        - 'main'
+    pull_request:
+      branches-ignore:
+        - 'main'
 
 jobs:
   phpstan:
