@@ -2,8 +2,8 @@
 
 A Laravel package for advanced query filtering and conditions.
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/oscabrera/laravel-query-filters.svg?style=flat-square)](https://packagist.org/packages/oscabrera/laravel-query-filtersgsgs)
-[![Total Downloads](https://img.shields.io/packagist/dt/oscabrera/laravel-query-filters.svg?style=flat-square)](https://packagist.org/packages/oscabrera/laravel-query-filtersgsgs)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/oscabrera/laravel-query-filters.svg?style=flat-square)](https://packagist.org/packages/oscabrera/laravel-query-filter)
+[![Total Downloads](https://img.shields.io/packagist/dt/oscabrera/laravel-query-filters.svg?style=flat-square)](https://packagist.org/packages/oscabrera/laravel-query-filters)
 
 [![VitePress](https://github.com/oscabrera/laravel-query-filters/actions/workflows/deploy.yml/badge.svg)](https://github.com/oscabrera/laravel-query-filters/actions/workflows/deploy.yml)
 [![PHPStan](https://github.com/oscabrera/laravel-query-filters/actions/workflows/phpstan.yml/badge.svg)](https://github.com/oscabrera/laravel-query-filters/actions/workflows/phpstan.yml)
