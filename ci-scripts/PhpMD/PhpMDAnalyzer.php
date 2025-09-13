@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Oscabrera\AnalyzerTool\CIScripts\PhpMD;
+namespace Oscabrera\QueryFilters\AnalyzerTool\CIScripts\PhpMD;
 
-use Oscabrera\AnalyzerTool\CIScripts\Analyzer\Analyzer;
+use Oscabrera\QueryFilters\AnalyzerTool\CIScripts\Analyzer\Analyzer;
 
 class PhpMDAnalyzer extends Analyzer
 {
