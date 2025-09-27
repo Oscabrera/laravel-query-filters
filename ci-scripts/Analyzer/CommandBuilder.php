@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Oscabrera\AnalyzerTool\CIScripts\Analyzer;
+namespace Oscabrera\QueryFilters\AnalyzerTool\CIScripts\Analyzer;
 
 class CommandBuilder
 {
