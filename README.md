@@ -6,9 +6,7 @@ A Laravel package for advanced query filtering and conditions.
 [![Total Downloads](https://img.shields.io/packagist/dt/oscabrera/laravel-query-filters.svg?style=flat-square)](https://packagist.org/packages/oscabrera/laravel-query-filters)
 
 [![VitePress](https://github.com/oscabrera/laravel-query-filters/actions/workflows/deploy.yml/badge.svg)](https://github.com/oscabrera/laravel-query-filters/actions/workflows/deploy.yml)
-[![PHPStan](https://github.com/oscabrera/laravel-query-filters/actions/workflows/phpstan.yml/badge.svg)](https://github.com/oscabrera/laravel-query-filters/actions/workflows/phpstan.yml)
-[![Pint](https://github.com/oscabrera/laravel-query-filters/actions/workflows/pint.yml/badge.svg)](https://github.com/oscabrera/laravel-query-filters/actions/workflows/pint.yml)
-[![PHPMD](https://github.com/oscabrera/laravel-query-filters/actions/workflows/phpmd.yml/badge.svg)](https://github.com/oscabrera/laravel-query-filters/actions/workflows/phpmd.yml)
+[![Code Analysis](https://github.com/Oscabrera/laravel-query-filters/actions/workflows/pr-feature.yml/badge.svg)](https://github.com/Oscabrera/laravel-query-filters/actions/workflows/pr-feature.yml)
 
 [![built with Codeium](https://codeium.com/badges/main)](https://codeium.com)
 
