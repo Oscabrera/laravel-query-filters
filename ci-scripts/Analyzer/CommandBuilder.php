@@ -39,8 +39,8 @@ class CommandBuilder
         return array_filter(
             $this->args,
             static function ($arg) use ($toRemove, $prefixToRemove) {
-                return !in_array($arg, $toRemove) &&
-                    !str_starts_with($arg, $prefixToRemove);
+                return !in_array($arg, $toRemove)
+                    && !str_starts_with($arg, $prefixToRemove);
             },
         );
     }

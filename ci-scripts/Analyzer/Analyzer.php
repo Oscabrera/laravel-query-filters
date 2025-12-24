@@ -24,6 +24,7 @@ class Analyzer extends AnalyzerSettings
             return $this->executeAnalysis();
         } catch (RuntimeException|Exception $exception) {
             $this->reportExceptionThrown($exception);
+
             return false;
         }
     }
@@ -38,13 +39,16 @@ class Analyzer extends AnalyzerSettings
         $files = $this->getFiles();
         if ($files === '') {
             $this->reportNoFilesAnalyze();
+
             return true;
         }
-        if (!$this->execute($files)) {
+        if (! $this->execute($files)) {
             $this->reportAnalysisFailed();
+
             return false;
         }
         $this->reportAnalysisSucceeded();
+
         return true;
     }
 
@@ -57,9 +61,9 @@ class Analyzer extends AnalyzerSettings
      */
     protected function getFiles(): string
     {
-        return $this->argumentHandler->shouldAnalyzeAll() ?
-            $this->analyzeAllFiles() :
-            $this->getDirectoryOrBranchFiles();
+        return $this->argumentHandler->shouldAnalyzeAll()
+            ? $this->analyzeAllFiles()
+            : $this->getDirectoryOrBranchFiles();
     }
 
     /**
@@ -70,6 +74,7 @@ class Analyzer extends AnalyzerSettings
     protected function analyzeAllFiles(): string
     {
         $this->echoAnalyzeAll();
+
         return '.';
     }
 
