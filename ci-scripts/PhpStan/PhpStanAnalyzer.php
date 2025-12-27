@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Oscabrera\AnalyzerTool\CIScripts\PhpStan;
+namespace Oscabrera\QueryFilters\AnalyzerTool\CIScripts\PhpStan;
 
-use Oscabrera\AnalyzerTool\CIScripts\Analyzer\Analyzer;
+use Oscabrera\QueryFilters\AnalyzerTool\CIScripts\Analyzer\Analyzer;
 
 class PhpStanAnalyzer extends Analyzer
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Oscabrera\AnalyzerTool\CIScripts\Analyzer;
+namespace Oscabrera\QueryFilters\AnalyzerTool\CIScripts\Analyzer;
 
 class CommandBuilder
 {
@@ -39,8 +39,8 @@ class CommandBuilder
         return array_filter(
             $this->args,
             static function ($arg) use ($toRemove, $prefixToRemove) {
-                return !in_array($arg, $toRemove) &&
-                    !str_starts_with($arg, $prefixToRemove);
+                return !in_array($arg, $toRemove)
+                    && !str_starts_with($arg, $prefixToRemove);
             },
         );
     }
